@@ -28,7 +28,7 @@ from langchain_core.runnables import RunnablePassthrough
 #load_dotenv()
 LLMKEY = st.secrets['OPENAI_API_KEY']
 
-st.write("Hello World!")
+st.write("PetMed AI")
 
 template = """You are a veterinarian for question-answering tasks. Answer the question based on the following context. If you don't know the answer, just say that you don't know. Use four sentences maximum and keep the answer concise:
 {context}
