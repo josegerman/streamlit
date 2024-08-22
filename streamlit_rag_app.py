@@ -26,7 +26,7 @@ from langchain_core.runnables import RunnablePassthrough
 # Load the variables from .env
 # ==================================
 #load_dotenv()
-OPENAI_API_KEY = st.secrets('OPENAIKEY') # <- changed
+OPENAI_API_KEY = st.secrets('OPENAI_API_KEY') # <- changed
 
 st.write("Hello World!")
 
