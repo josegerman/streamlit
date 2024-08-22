@@ -26,7 +26,7 @@ from langchain_core.runnables import RunnablePassthrough
 # Load the variables from .env
 # ==================================
 #load_dotenv()
-OPENAI_API_KEY = st.secrets('OPENAI_API_KEY') # <- changed
+LLMKEY = st.secrets['OPENAI_API_KEY']
 
 st.write("Hello World!")
 
@@ -37,8 +37,8 @@ Question: {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-model = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY) # <- changed
-embedding = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=OPENAI_API_KEY) # <- changed
+model = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", openai_api_key=LLMKEY) # <- changed
+embedding = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=LLMKEY) # <- changed
 
 # Define the persistent directory
 #current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -66,6 +66,6 @@ st.write(result)
 # ==================================
 # Run streamlit app
 # ==================================
-# streamlit run C:\_DEV\VSCode\Workspaces\streamlit\streamlit\streamlit_rag_app.py
+# streamlit run C:\_DEV\VSCode\Workspaces\streamlit\streamlit_rag_app.py
 
 
